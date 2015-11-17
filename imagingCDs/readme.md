@@ -2,7 +2,7 @@
 
 #### Short version here (longer, more accurate version below):  
 
-*Note :  This method will need very little modification to run on a Mac.  If you are using a Windows operating system, Cygwin provides a "Unix-like" environment and a large collection of open-source command line tools useful for this process.  https://cygwin.com/index.html*
+*Note :  This method will need very little modification to run on a Mac.  If you are using a Windows operating system, [Cygwin](https://cygwin.com/index.html) provides a "Unix-like" environment and a large collection of open-source command line tools useful for this process.*
 
 
 One of the simplest methods is to run the program dd from the command line from a computer running a Linux operating system:
@@ -10,6 +10,7 @@ One of the simplest methods is to run the program dd from the command line from 
 ##### 1. open a terminal window.
 
 ##### 2. find the path to the cd drive. 
+
 ```
 mount|grep ^'/dev'
 ```
@@ -25,6 +26,7 @@ The specifics will vary, but you get the idea.  The important part is that you'l
 The value for "sd#" in that line of output is your optical media drive.  Plug that value into the dd command in step 2.  
 
 ##### 3. unmount the CD
+
 ```
 umount /dev/sd#
 ```
@@ -37,8 +39,9 @@ dd if=/dev/sd# of= pathto/filenameforCD-ROMimage.iso
 
 you will see an output like this:
 
-```1236416+0 records in
-1236416+0 records out
+```
+998000+0 records in
+998000+0 records out
 633044992 bytes (633 MB) copied, 255,874 s, 2,5 MB/s
 ```
 
@@ -46,9 +49,7 @@ you will see an output like this:
 
 and your .iso file is ready to go wherever you saved it.  
 
-
-======
-
+----
 
 #### Longer, more accurate version:  
 
@@ -58,15 +59,17 @@ In the meantime, here are some particularly valuable resources to check first, f
 
 ##### 1. The [Guymager](http://guymager.sourceforge.net/) program is an [open-source forensic imaging program](http://www.forensicswiki.org/wiki/Guymager), focused on ease-of-use and speed.  Guymager is included as part of the Bitcurator digital forensics suite.  
 
-Bitcurator provides this excellent and clear tutorial for creating disk images via Guymager: 
+* Bitcurator provides this excellent and clear tutorial for creating disk images via Guymager: 
 ["Creating a disk image using Guymager"](http://wiki.bitcurator.net/index.php?title=Creating_a_Disk_Image_Using_Guymager) 
 
-##### The [Bitcurator wiki](http://wiki.bitcurator.net/index.php?title=Main_Page) and [project](http://www.bitcurator.net/) is an excellent resource to check out for many data curation questions and tools, and they are very responsive and helpful with questions.     
+* The [Bitcurator wiki](http://wiki.bitcurator.net/index.php?title=Main_Page) and [project](http://www.bitcurator.net/) is an excellent resource to check out for many data curation questions and tools, and they are very responsive and helpful with questions.     
 
 ##### 2. Here is an excellent and very through discussion of creating images for optical media, provided by the Koninklijke Bibliotheek, the National Library of the Netherlands. 
-["Preserving Optical Media from the Command Line"](http://blog.kbresearch.nl/2015/11/13/preserving-optical-media-from-the-command-line/)
+* ["Preserving Optical Media from the Command Line"](http://blog.kbresearch.nl/2015/11/13/preserving-optical-media-from-the-command-line/)
 
-(Thank you Koninklijke Bibliotheek for sharing your research, compiling this excellent resource, and sharing it with the digital preservation community, and thank you to NDS Resident Dinah Handel for alerting me to this page!)
+* (Thank you Koninklijke Bibliotheek for sharing your research, compiling this excellent resource, and sharing it with the digital preservation community, and thank you to NDS Resident Dinah Handel for alerting me to this page!)
 
-##### 3. One of the sources cited by the KB optical media discussion is this [analytic report](http://www.digitizationguidelines.gov/audio-visual/documents/Preserve_DVDs_BloodReport_20140901.pdf?loclr=blogsig) about producing disc images and addressing errors, produced by George Blood Audio Video Film for the Library of Congress in April 2014.  
+##### 3. One of the sources cited by the KB optical media discussion is this analytic report about producing disc images and addressing errors, produced by George Blood Audio Video Film for the Library of Congress in April 2014.  
+
+* [Access Report Here](http://www.digitizationguidelines.gov/audio-visual/documents/Preserve_DVDs_BloodReport_20140901.pdf?loclr=blogsig) 
 
