@@ -1,1 +1,0 @@
-instructions for imaging cds
