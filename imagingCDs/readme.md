@@ -2,10 +2,10 @@
 
 #### Short version here (longer, more accurate version below):  
 
-*Note :  This method will need very little modification to run on a Mac.  If you are using a Windows operating system, [Cygwin](https://cygwin.com/index.html) provides a "Unix-like" environment and a large collection of open-source command line tools useful for this process.*
+* *Note :  This method will need very little modification to run on a Mac.  If you are using a Windows operating system, [Cygwin](https://cygwin.com/index.html) provides a "Unix-like" environment and a large collection of open-source command line tools useful for this process.* 
 
 
-One of the simplest methods is to run the program dd from the command line from a computer running a Linux operating system:
+One of the simplest methods is to run the program ``dd`` from the command line from a computer running a Linux operating system.  Check out documentation for ``dd`` [here](http://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html).
 
 ##### 1. open a terminal window.
 
@@ -21,7 +21,7 @@ one of the lines of output will look like something like this:
 /dev/sd# on /media/username/VERY_LIKELY_A_CD-ROM_NAME type iso9660
 ```
 
-The specifics will vary, but you get the idea.  The important part is that you'll look at the list of output, and you'll recognize that one of the /dev/s in your optical drive.  
+The specifics will vary, but you get the idea.  The important part is that you'll look at the list of output, and you'll recognize that one of the /dev s is your optical drive.  
 
 The value for "sd#" in that line of output is your optical media drive.  Plug that value into the dd command in step 2.  
 
