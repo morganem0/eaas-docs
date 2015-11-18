@@ -1,4 +1,4 @@
-##The bwFLA demo server provides access to cloud-based emulation: http://demo.bw-fla.uni-freiburg.de/
+##The bwFLA site provides access to software emulation via a remote demo server: http://demo.bw-fla.uni-freiburg.de/
 
 The emulation as a service framework provides a number of options for accessing media in different emulation environments.
 
