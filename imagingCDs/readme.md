@@ -4,7 +4,7 @@
 
 One of the simplest methods is to run the program ``dd`` from the command line from a computer running a Linux operating system.  Check out documentation for ``dd`` [here](http://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html).
 
-* *Note :  This method will need very little modification to run on a Mac.  If you are using a Windows operating system, [Cygwin](https://cygwin.com/index.html) provides a "Unix-like" environment and a large collection of open-source command line tools useful for this process.* 
+* *Note :  This method will need little modification to run on a Mac.  If you are using a Windows operating system, [Cygwin](https://cygwin.com/index.html) provides a "Unix-like" environment and a large collection of open-source command line tools useful for this process.* 
 
 ##### 1. open a terminal window.
 
@@ -17,23 +17,23 @@ mount|grep ^'/dev'
 one of the lines of output will look like something like this:
 
 ``` 
-/dev/sd# on /media/username/VERY_LIKELY_A_CD-ROM_NAME type iso9660
+/dev/sr# on /media/username/VERY_LIKELY_A_CD-ROM_NAME type iso9660
 ```
 
 The specifics will vary, but you get the idea.  The important part is that you'll look at the list of output, and you'll recognize that one of the /dev s is your optical drive.  
 
-The value for "sd#" in that line of output is your optical media drive.  Plug that value into the ``dd`` command in step 2.  
+The value for "sr#" in that line of output is your optical media drive.  Plug that value into the ``dd`` command in step 2.  
 
 ##### 3. unmount the CD
 
 ```
-umount /dev/sd#
+umount /dev/sr#
 ```
 
 ##### 4. run ``dd`` to generate an .iso file of the CD-ROM
 
 ```
-dd if=/dev/sd# of= pathto/filenameforCD-ROMimage.iso
+dd if=/dev/sr# of= pathto/filenameforCD-ROMimage.iso
 ```
 
 you will see an output like this:
